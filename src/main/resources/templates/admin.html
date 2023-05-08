@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/admin.css}">
+    <title>Панель администратора</title>
+</head>
+<body>
+    <h2>
+        Список опций:
+    </h2>
+    <div class="options-list">
+        <a th:href="@{/admin/users}">
+            <button class="option-button">Список всех пользователей</button>
+        </a>
+        <a th:href="@{admin/cars}">
+            <button class="option-button">Список всех автомобилей</button>
+        </a>
+    </div>
+</body>
+</html>

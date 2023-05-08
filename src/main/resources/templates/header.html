@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header th:fragment="header">
+        <div id="logo"><a th:href="@{/home}">taxi rent</a><div class="header-image" id="row1"></div><div class="header-image" id="row2"></div></div>
+        <div class="header-buttons-holder">
+            <span th:if="${user}" class="username-header" th:text="'Здравствуйте, ' + ${user.name}"></span>
+            <a th:if="${admin}" th:href="@{/admin}">
+                <button class="header-button">
+                    Управление
+                </button>
+            </a>
+            <form th:if="${user}" class="logout-form" method="post" th:action="@{/logout}">
+                <input type="submit" class="header-button" id="log-out-button" value="Выйти">
+            </form>
+            <a th:unless="${user}" th:href="@{/register}">
+                <button type="button" class="header-button" id="reg-in-button">
+                    Регистрация
+                </button>
+            </a>
+            <a th:unless="${user}" th:href="@{/login}">
+                <button type="button" class="header-button" id="sign-in-button">
+                    Войти
+                </button>
+            </a>
+        </div>
+    </header>
+</body>
+</html>

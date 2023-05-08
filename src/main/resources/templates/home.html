@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аренда авто под такси в Москве</title>
+  <link rel="stylesheet" type="text/css" th:href="@{css/home-css.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{css/header.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{css/footer.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:include="header :: header"></header>
+<main>
+  <h1>
+    Аренда авто для работы в такси
+  </h1>
+  <p class="text">
+    &emsp;&emsp;С помощью данного сервиса вы можете взять в аренду автомобиль такси по доступным ценам!
+  </p>
+  <h2>
+    Наши преимущества:
+  </h2>
+  <article class="advantages">
+    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <div class="advantage">
+      <span class="advantage-header">Быстрое оформление</span><br>
+      Возьмите авто в аренду быстро, оформив заявку онлайн
+    </div>
+    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <div class="advantage">
+      <span class="advantage-header">Много предложений</span><br>
+      Выберете подходящий для себя вариант из множества автомобилей, представленных на сайте
+    </div>
+    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <div class="advantage">
+      <span class="advantage-header">Снижение расходов</span><br>
+      Вам больше не придется тратиться на ремонт и обслуживание авто &#8211; таксопарк сделает это за вас
+    </div>
+  </article>
+  <h2>
+    Когда стоит брать в прокат автомобиль для работы в такси?
+  </h2>
+  <article class="cases">
+    <span class="case"><div class="marker" id="marker1"></div>Когда нет своего автомобиля</span>
+    <span class="case"><div class="marker" id="marker2"></div>Пугают цены на обслуживание и ремонт</span>
+    <span class="case"><div class="marker" id="marker3"></div>Жалко свою машину :(</span>
+    <span class="case"><div class="marker" id="marker4"></div>Своя машина подходит только для тарифа "Эконом"</span>
+  </article>
+  <h2>
+    Пример машин, доступных на сайте:
+  </h2>
+  <article class="cars">
+    <a th:each="car : ${cars}" th:href="@{'/cars/' + ${car.id}}">
+      <div  class="car">
+        <span class="car-header" th:text="${car.name}">***</span>
+        <img class="car-image" th:src="'/image/by-id/' + ${car.photos[0].id}" >
+        <span class="car-price" th:text="'От ' + ${car.price} + '₽ в сутки'">***</span>
+      </div>
+    </a>
+  </article>
+  <div class="all-cars-button-holder">
+    <a th:href="@{/cars/all(page=0)}">
+      <button type="button" class="show-all-cars black-button">Посмотреть все</button>
+    </a>
+  </div>
+
+  <h2>Заполните форму, чтобы получить помощь в подборе и оформлении автомобиля</h2>
+  <form th:action="@{/contact}" method="post" th:object="${contactForm}" class="found-car-form">
+    <input type="text" th:field="*{name}" name="name" id="name" class="form-text-input" required>
+    <label for="name" class="form-label req" id="name-label">Имя</label>
+    <input type="text" th:field="*{phoneNumber}" class="form-text-input" id="phone" name="phone" required value="greseheh">
+    <label for="phone" class="form-label">Номер телефона</label>
+    <input type="text" th:field="*{driverLicense}" class="form-text-input" id="license">
+    <label for="license" class="form-label">Серия и номер ВУ</label>
+    <div class="form-text">Отправляя заявку, вы соглашаетесь с условиями <a th:href="@{/offer}">оферты</a></div>
+    <button type="submit" class="send-form black-button">Отправить</button>
+  </form>
+</main>
+<footer th:include="footer :: footer"></footer>
+</body>
+</html>

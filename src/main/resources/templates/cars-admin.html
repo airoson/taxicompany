@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/admin-cars.css">
+    <title>Список автомобилей</title>
+</head>
+<body>
+    <form th:action="@{/admin/cars/setfilter}" method="post" class="filter-form">
+        <h3>
+            Поиск по:
+        </h3>
+        <label for="filter-name" class="filter-label">По имени: </label>
+        <input type="text" class="filter-text" id="filter-name" name="name">
+        <label for="id" class="filter-label">По ID: </label>
+        <input type="text" class="filter-text" id="id" name="id">
+        <span>
+            Показывать на странице
+        </span>
+        <select>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select>
+        <button type="submit" class="regular-button">Поиск</button>
+    </form>
+    <h2>Доступные автомобили</h2>
+    <div class="cars-holder">
+        <div class="car-entry" id="1">
+            <div class="entry-elem">
+                <div class="number">1</div>
+            </div>
+            <div class="entry-elem">
+                <textarea id="1-name" class="name-text" rows="1" cols="30">Name name</textarea>
+                <img src="../static/image/image1.png" id="1-image" class="entry-image" alt="car image">
+                <label class="change-image-label" for="1-change-image">Изменить</label>
+                <input type="file" id="1-change-image" car-id="1" class="change-image">
+            </div>
+            <div class="entry-elem">
+                <div class="entry-price-elem">
+                    <label for="1-price">Цена</label>
+                    <textarea id="1-price" rows="1" cols="6">1000</textarea><span>₽</span>
+                </div>
+                <div class="entry-price-elem">
+                    <label for="1-rental-period">Мин. срок аренды (дней)</label>
+                    <textarea id="1-rental-period" rows="1" cols="6">7</textarea>
+                </div>
+                <div class="entry-price-elem">
+                    <label for="1-pay-frequency">Платежи раз в</label>
+                    <textarea id="1-pay-frequency" rows="1" cols="6">1</textarea><span>день</span>
+                </div>
+            </div>
+            <label for="1-gearbox" class="entry-elem">
+                <select id="1-gearbox" class="entry-select">
+                    <option>автомат</option>
+                    <option>механика</option>
+                </select>
+            </label>
+            <label for="1-engine" class="entry-elem">
+                <select id="1-engine" class="entry-select">
+                    <option>Бензин</option>
+                    <option>Дизель</option>
+                    <option>Газ</option>
+                </select>
+            </label>
+            <div class="entry-elem">
+                <div class="rates-holder">
+                    <input type="checkbox" class="1-rate-checkbox" id="1-1-rate">
+                    <label for="1-1-rate" class="1-entry-text">Эконом</label><br>
+                    <input type="checkbox" class="1-rate-checkbox" id="1-2-rate">
+                    <label for="1-2-rate" class="entry-text">Комфорт</label><br>
+                    <input type="checkbox" class="1-rate-checkbox" id="1-3-rate">
+                    <label for="1-3-rate" class="entry-text">Комфорт+</label><br>
+                    <input type="checkbox" class="1-rate-checkbox" id="1-4-rate">
+                    <label for="1-4-rate" class="entry-text">Бизнес</label><br>
+                    <input type="checkbox" class="1-rate-checkbox" id="1-5-rate">
+                    <label for="1-5-rate" class="entry-text">Премиум</label>
+                </div>
+            </div>
+            <div class="entry-elem">
+                <ul id="1-addons" class="addons">
+                    <li>Sample text <button car-id="1" class="change-list remove">-</button></li>
+                    <li>Sample text <button car-id="1" class="change-list remove">-</button></li>
+                </ul>
+                <div class="addon-button-holder">
+                    <textarea id="1-addon-text" rows="1" cols="10"></textarea><button car-id="1" class="add change-list">+</button>
+                </div>
+            </div>
+            <div class="entry-elem">
+                <div class="control-buttons-holder">
+                    <button class="regular-button control-button update-car" car-id="1">Обновить</button>
+                    <div class="error-message">Данные указаны не верно!</div>
+                    <button class="regular-button control-button delete-car" car-id="1">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../static/js/cars-admin.js">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.form-holder{
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#phoneNumber{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+label[for="phoneNumber"]{
+    grid-column:1 / 2;
+    grid-row:1 / 2;
+}
+
+#password{
+    grid-column: 2 / 3;
+    grid-row:2 / 3;
+}
+
+label[for="password"]{
+    grid-column:1 / 2;
+    grid-row: 2 / 3;
+}

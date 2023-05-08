@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/contact-confirm.css}">
+    <title>Заявка принята</title>
+</head>
+<body>
+  <article class="contact-confirm-holder">
+      <div class="logo-text">taxi rent</div>
+      <div class="form-header-line" id="row1"></div>
+      <div class="form-header-line" id="row2"></div>
+      <p th:text="${username} + ', ваша заявка принята.'">
+          Username
+      </p>
+      <p th:if="${car} != null">
+        Ожидайте, пока с вами свяжется наш менеджер, чтобы уточнить детали по
+          <span th:text="${car.name}"></span>
+      </p>
+      <p th:if="${car} == null">
+          Ожидайте, пока с вами свяжется наш менеджер.
+      </p>
+      <div class="buttons-holder">
+          <a th:href="@{/cars/all?page=0}">
+              <button type="button" class="contact-confirm-button">Все автомобили</button>
+          </a>
+          <a th:href="@{/home}">
+              <button type="button" class="contact-confirm-button">На главную</button>
+          </a>
+      </div>
+  </article>
+</body>
+</html>

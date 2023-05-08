@@ -1,0 +1,178 @@
+html, body{
+    padding:0;
+    margin:0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.filter-form{
+    padding:5px 20px;
+    display:block;
+    border-top:3px #080808 solid;
+    border-bottom: 3px #080808 solid;
+}
+
+.filter-text{
+    margin-right: 10px;
+}
+
+h2{
+    margin-left:10px;
+}
+
+.regular-button{
+    border:none;
+    border-radius: 3px;
+    padding:5px 20px;
+    margin: 0 10px;
+    background-color: #080808;
+    color:#fefefe;
+}
+
+.regular-button:hover, .change-image-label:hover{
+    background-color: #3a3a3a;
+}
+
+.change-image{
+    position:absolute;
+    width:0;
+    height:0;
+    z-index: -1;
+}
+
+.change-image-label{
+    border-radius: 3px;
+    padding:5px 20px;
+    background-color: #080808;
+    color:#fefefe;
+    margin:5px auto;
+    width:80px;
+    text-align:center;
+    display:block;
+}
+
+.cars-holder{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content:start;
+    background-color: #080808;
+    padding: 1px 0;
+    margin-left:10px;
+}
+
+.car-entry{
+    display:grid;
+    background-color: #080808;
+    column-gap: 2px;
+    padding:1px 2px;
+    grid-template-columns: 40px 300px 120px 100px 100px 130px 200px 130px;
+}
+
+.entry-elem{
+    background-color:#fefefe;
+}
+
+.entry-image{
+    width: 240px;
+    height: 135px;
+    display:block;
+    margin:10px auto;
+}
+
+.number{
+    font-size: 1.2em;
+    margin:20px 10px;
+}
+
+#change-image{
+    display:block;
+    margin:10px auto 5px;
+}
+
+
+
+textarea{
+    resize: none;
+    border:2px #080808 solid;
+    margin:0 5px 0 0;
+}
+
+.name-text{
+    display:block;
+    margin:5px auto;
+}
+
+.entry-price-elem{
+    margin:5px 0 10px 10px;
+}
+
+.entry-select{
+    margin:20px 10px;
+}
+
+.entry-text{
+    padding:5px 0;
+}
+
+.rates-holder{
+    margin:20px 10px 0;
+}
+
+.change-list{
+    border:none;
+    background-color: #c9c9c9;
+}
+
+.change-list:hover{
+    background-color: #e7e7e7;
+}
+
+.addons{
+    margin:10px 0 5px 10px;
+}
+
+.remove{
+    color: red;
+    margin-left:5px;
+}
+
+.add{
+    color: green;
+    margin-top:5px;
+}
+
+.addon-button-holder textarea{
+    margin:0 10px;
+}
+
+.addon-button-holder{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    margin-left:10px;
+    margin-top:5px;
+}
+
+.control-buttons-holder{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+}
+
+.control-button{
+    margin:10px 5px;
+}
+
+.error-message{
+    font-size:0.8em;
+    color:red;
+    margin:5px;
+    display: none;
+}
+
+textarea ~ span{
+    position:relative;
+    top:-5px;
+}

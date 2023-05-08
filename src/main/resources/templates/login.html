@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/form-general.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <title>Войти</title>
+</head>
+<body>
+
+    <div class="user-form">
+      <div class="logo-text">taxi rent</div>
+      <div class="form-header-line" id="row1"></div>
+      <div class="form-header-line" id="row2"></div>
+      <div class="form-header-text">Вход</div>
+      <div th:if="${loginError}" class="form-error">Неверное имя пользователя или пароль.</div>
+      <form th:action="@{/login}" method="post" class="form-holder">
+        <input type="text" class="text-field" name="username" id="phoneNumber" required>
+        <label for="phoneNumber" class="text-label">Телефон</label>
+        <input type="password" class="text-field" name="password" id="password" required>
+        <label for="password" class="text-label">Пароль</label>
+        <button type="submit" class="form-submit" value="Login">Войти</button>
+      </form>
+    </div>
+    <span>Ещё нет аккаунта? <a th:href="@{/register}">Зарегистрироваться</a></span>
+</body>
+</html>

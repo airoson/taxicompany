@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда авто под такси в Москве</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: gtalike;
+            src: url('static/fonts/pricedow.ttf');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="#">taxi rent</a><div class="header-image" id="row1"></div><div class="header-image" id="row2"></div></div>
+        <div class="header-buttons-holder">
+            <button type="button" class="header-button" id="reg-up-button">
+                Регистрация
+            </button>
+            <button type="button" class="header-button" id="sign-in-button">
+                Войти
+            </button>
+        </div>
+    </header>
+    <main>
+        <h1>
+            Аренда авто для работы в такси
+        </h1>
+        <p class="text">
+            &emsp;&emsp;С помощью данного сервиса вы можете взять в аренду автомобиль такси по доступным ценам!
+        </p>
+        <h2>
+            Наши преимущества:
+        </h2>
+        <article class="advantages">
+            <img class="check-sign" src="static/image/check-sign.png" width="30" height="30" alt="green check sign">
+            <div class="advantage">
+                <span class="advantage-header">Быстрое оформление</span><br>
+                Возьмите авто в аренду быстро, оформив заявку онлайн
+            </div>
+            <img class="check-sign" src="static/image/check-sign.png" width="30" height="30" alt="green check sign">
+            <div class="advantage">
+                <span class="advantage-header">Много предложений</span><br>
+                Выберете подходящий для себя вариант из множества автомобилей, представленных на сайте
+            </div>
+            <img class="check-sign" src="static/image/check-sign.png" width="30" height="30" alt="green check sign">
+            <div class="advantage">
+                <span class="advantage-header">Снижение расходов</span><br>
+                Вам больше не придется тратиться на ремонт и обслуживание авто &#8211; таксопарк сделает это за вас
+            </div>
+        </article>
+        <h2>
+            Когда стоит брать в прокат автомобиль для работы в такси?
+        </h2>
+        <article class="cases">
+            <span class="case"><div class="marker" id="marker1"></div>Когда нет своего автомобиля</span>
+            <span class="case"><div class="marker" id="marker2"></div>Пугают цены на обслуживание и ремонт</span>
+            <span class="case"><div class="marker" id="marker3"></div>Жалко свою машину :(</span>
+            <span class="case"><div class="marker" id="marker4"></div>Своя машина подходит только для тарифа "Эконом"</span>
+        </article>
+        <h2>
+            Пример машин, доступных на сайте:
+        </h2>
+        <article class="cars">
+            <div class="car">
+                <span class="car-header">SEAT Altea</span>
+                <img class="car-image" src="static/image/image1.png" >
+                <span class="car-price" data-text="От 1000₽ в сутки">От 1000₽ в сутки</span>
+            </div>
+            <div class="car">
+                <span class="car-header">HYUNDAI Solaris</span>
+                <img class="car-image" src="static/image/car2.png" >
+                <span class="car-price" data-text="От 1000₽ в сутки">От 900₽ в сутки</span>
+            </div>
+            <div class="car">
+                <span class="car-header">FORD Focus</span>
+                <img class="car-image" src="static/image/car3.png" >
+                <span class="car-price" data-text="От 1000₽ в сутки">От 1200₽ в сутки</span>
+            </div>
+        </article>
+        <button type="button" class="show-all-cars black-button"><a href="#">Посмотреть все</a></button>
+        <h2>Заполните форму, чтобы получить помощь в подборе и оформлении автомобиля</h2>
+        <form action="" method="" class="found-car-form">
+            <input type="text" name="name" id="name" class="form-text-input" required>
+            <label for="name" class="form-label req" id="name-label">Имя</label>
+            <input type="text" class="form-text-input" id="phone" name="phone" required>
+            <label for="phone" class="form-label">Номер телефона</label>
+            <input type="text" class="form-text-input" id="license">
+            <label for="license" class="form-label">Серия и номер ВУ</label>
+            <div class="form-text">Отправляя заявку, вы соглашаетесь с условиями <a href="#">оферты</a></div>
+            <button type="submit" class="send-form black-button">Отправить</button>
+        </form>
+    </main>
+    <footer>
+        <div class="contacts">
+            <span class="footer-text">Наша почта: </span>
+            <a href="mailto:example@example.ru" class="footer-link">example@example.ru</a>
+            <span class="footer-text">Телефон для связи: </span>
+            <a href="tel:+79450010101" class="footer-link">+79450010101</a>
+        </div>
+        <span class="copy-text">taxi rent, 2023</span>
+    </footer>
+</body>
+</html>

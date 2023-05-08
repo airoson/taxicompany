@@ -1,0 +1,43 @@
+.form-holder{
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#name{
+    grid-column: 2 / 3;
+    grid-row:1 / 2;
+}
+
+label[for="name"]{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#phoneNumber{
+    grid-column: 2 / 3;
+    grid-row:2 / 3;
+}
+
+label[for="phoneNumber"]{
+    grid-column: 1 / 2;
+    grid-row:2 / 3;
+}
+
+#email{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+label[for="email"]{
+    grid-column: 1 / 2;
+    grid-row:3 / 4;
+}
+
+#password{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+label[for="password"]{
+    grid-column: 1 / 2;
+    grid-row:4 / 5;
+}

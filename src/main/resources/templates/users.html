@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/users.css}">
+  <title>Зарегистрированные пользователи</title>
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+<h2>
+  Список зарегистрированных пользователей:
+</h2>
+<div class="table-holder">
+  <div th:each="user : ${users}" class="user-table">
+    <div class="table-elem" th:text="${user.name}">
+
+    </div>
+    <div class="table-elem" th:text="${user.phoneNumber}">
+    </div>
+    <div class="table-elem" th:text="${user.email}">
+      example@example.com
+    </div>
+    <div class="table-elem" th:text="${user.createdAt.dayOfMonth} + '.' + ${user.createdAt.monthValue} + '.' + ${user.createdAt.year}" >
+    </div>
+    <div class="table-elem">
+      <button type="button" class="delete-button" th:attr="delete-id=${user.id}">
+        Удалить
+      </button>
+    </div>
+  </div>
+  <div>
+    <a th:href="@{/admin}">
+      <button class="return-button">
+        Назад
+      </button>
+    </a>
+  </div>
+</div>
+<script>
+  let delete_user = document.querySelectorAll(".delete-button")
+  let token = document.querySelector("meta[name='_csrf']").getAttribute("content");
+  let header = document.querySelector("meta[name='_csrf_header']").getAttribute("content");
+  for(let button of delete_user){
+    button.addEventListener("click", async (event) => {
+      let response = await fetch("http://localhost:8080/api/user/" + event.target.getAttribute("delete-id"), {
+        method: "DELETE",
+        headers: {
+          [header]: token
+        }
+      });
+      location.replace(location.href);
+    });
+  };
+</script>
+</body>
+</html>

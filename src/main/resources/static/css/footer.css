@@ -1,0 +1,29 @@
+footer{
+    background-color: #080808;
+    height:100px;
+    color:#fefefe;
+    display: grid;
+    grid-template-columns:400px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contacts{
+    display:inline-flex;
+    flex-wrap: wrap;
+    margin:20px 50px;
+    align-self:center;
+}
+
+.copy-text{
+    margin-bottom:10px;
+    align-self:end;
+    justify-self: end;
+    margin-right:20px;
+    color: #3a3a3a;
+}
+
+.footer-link{
+    margin-left:5px;
+    color:#F7E105;
+    text-decoration: none;
+}

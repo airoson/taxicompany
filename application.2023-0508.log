@@ -1,0 +1,283 @@
+1900 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Starting TaxicompanyApplication using Java 17.0.6 with PID 11912 (C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany\target\classes started by Andrei in C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany)
+1907 [restartedMain] INFO  c.j.t.TaxicompanyApplication – No active profile set, falling back to 1 default profile: "default"
+2083 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2084 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+4039 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4308 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 247 ms. Found 3 JPA repository interfaces.
+6442 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+6469 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+6472 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+6474 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.8]
+6959 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+6962 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 4874 ms
+7514 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+7637 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+8310 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+8760 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59722706
+8764 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+8926 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11247 [restartedMain] INFO  o.hibernate.orm.connections.access – HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@61f2f96f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+11389 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11403 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+12267 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12827 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24fac701, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@731f0aa0, org.springframework.security.web.context.SecurityContextHolderFilter@7d33bf10, org.springframework.security.web.header.HeaderWriterFilter@6b87be23, org.springframework.security.web.csrf.CsrfFilter@7a160c25, org.springframework.security.web.authentication.logout.LogoutFilter@5b89e33d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@333c65fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25de7867, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@317f7d3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@763473b, org.springframework.security.web.access.ExceptionTranslationFilter@98893f5, org.springframework.security.web.access.intercept.AuthorizationFilter@50b368b3]
+13249 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+13286 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+13389 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+13408 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Started TaxicompanyApplication in 12.287 seconds (process running for 13.981)
+25740 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+25740 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+25742 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+26513 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase – Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [109] milliseconds.
+26785 [http-nio-8080-exec-4] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+26793 [http-nio-8080-exec-4] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+26794 [http-nio-8080-exec-4] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+26839 [http-nio-8080-exec-4] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-4][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+26843 [http-nio-8080-exec-4] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-4][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+27470 [http-nio-8080-exec-4] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-4][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+27470 [http-nio-8080-exec-4] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-4][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+37801 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+37802 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+37803 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+37804 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+37805 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера
+37805 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+37806 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+37807 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+37808 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+37809 [http-nio-8080-exec-3] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+37821 [http-nio-8080-exec-3] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-3][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 11, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+37821 [http-nio-8080-exec-3] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-3][cars] Deprecated unwrapped fragment expression "header :: header" found in template cars, line 11, col 11. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+40116 [http-nio-8080-exec-3] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-3][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 113, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+40117 [http-nio-8080-exec-3] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-3][cars] Deprecated unwrapped fragment expression "footer :: footer" found in template cars, line 113, col 11. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+61495 [http-nio-8080-exec-1] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-1][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 11, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+61495 [http-nio-8080-exec-1] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-1][cars] Deprecated unwrapped fragment expression "header :: header" found in template cars, line 11, col 11. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+61542 [http-nio-8080-exec-1] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-1][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 113, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+61543 [http-nio-8080-exec-1] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-1][cars] Deprecated unwrapped fragment expression "footer :: footer" found in template cars, line 113, col 11. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+70914 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+70915 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+70916 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+70916 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+70917 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера
+70917 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+70918 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+70918 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+70921 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+70922 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+70926 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 11, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+70926 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][cars] Deprecated unwrapped fragment expression "header :: header" found in template cars, line 11, col 11. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+72673 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 113, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+72673 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][cars] Deprecated unwrapped fragment expression "footer :: footer" found in template cars, line 113, col 11. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+78223 [http-nio-8080-exec-6] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+78227 [http-nio-8080-exec-6] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-6][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 11, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+78228 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-6][cars] Deprecated unwrapped fragment expression "header :: header" found in template cars, line 11, col 11. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+78359 [http-nio-8080-exec-6] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-6][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 113, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+78359 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-6][cars] Deprecated unwrapped fragment expression "footer :: footer" found in template cars, line 113, col 11. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+88433 [http-nio-8080-exec-1] INFO  c.j.t.configurations.SecurityConfig – User's password $2a$10$2vnMyRr2I4Bef1OFY8BKGu/Fl/PRdBtIdYBeRW8m0eijME7Di8wGS
+88523 [http-nio-8080-exec-6] INFO  c.j.t.controllers.HomeController – Current user's name is admin phone is 1000 email is example@gmail.com
+88528 [http-nio-8080-exec-6] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+88528 [http-nio-8080-exec-6] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+88529 [http-nio-8080-exec-6] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+88535 [http-nio-8080-exec-6] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-6][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+88535 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-6][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+88762 [http-nio-8080-exec-6] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-6][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+88763 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-6][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+93094 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+93094 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+93095 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+93095 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+93095 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера
+93096 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+93096 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+93096 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+93097 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+93097 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+93101 [http-nio-8080-exec-2] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-2][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 11, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+93101 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-2][cars] Deprecated unwrapped fragment expression "header :: header" found in template cars, line 11, col 11. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+94676 [http-nio-8080-exec-2] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-2][cars] Deprecated attribute {th:include,data-th-include} found in template cars, line 113, col 11. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+94676 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-2][cars] Deprecated unwrapped fragment expression "footer :: footer" found in template cars, line 113, col 11. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+103415 [http-nio-8080-exec-5] INFO  c.j.t.controllers.HomeController – Current user's name is admin phone is 1000 email is example@gmail.com
+103420 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+103420 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+103420 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+103427 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+103428 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+103666 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+103666 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+131037 [http-nio-8080-exec-7] INFO  c.j.t.controllers.HomeController – Current user's name is admin phone is 1000 email is example@gmail.com
+131047 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+131047 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+131048 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+131054 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+131054 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+131379 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+131379 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+133527 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+133528 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+133528 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+133534 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+133534 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+133800 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+133801 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+146457 [http-nio-8080-exec-9] INFO  c.j.t.security.RegistrationForm – Encoded password $2a$10$YAqCl5WJFveBYm8HYmA1L.WTrKrfMs67.J3mcNe6npuz0qnck.mBO, given 1234
+146479 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+146480 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+146480 [http-nio-8080-exec-7] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+146486 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+146487 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+146704 [http-nio-8080-exec-7] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+146704 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-7][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+155269 [http-nio-8080-exec-7] INFO  c.j.t.configurations.SecurityConfig – User's password $2a$10$2vnMyRr2I4Bef1OFY8BKGu/Fl/PRdBtIdYBeRW8m0eijME7Di8wGS
+160564 [http-nio-8080-exec-3] INFO  c.j.t.configurations.SecurityConfig – User's password $2a$10$2vnMyRr2I4Bef1OFY8BKGu/Fl/PRdBtIdYBeRW8m0eijME7Di8wGS
+160657 [http-nio-8080-exec-2] INFO  c.j.t.controllers.HomeController – Current user's name is admin phone is 1000 email is example@gmail.com
+160662 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+160663 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+160663 [http-nio-8080-exec-2] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+160670 [http-nio-8080-exec-2] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-2][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+160670 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-2][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+160929 [http-nio-8080-exec-2] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-2][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+160929 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-2][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+346608 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+346613 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+346629 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+1487 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Starting TaxicompanyApplication using Java 17.0.6 with PID 5160 (C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany\target\classes started by Andrei in C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany)
+1499 [restartedMain] INFO  c.j.t.TaxicompanyApplication – No active profile set, falling back to 1 default profile: "default"
+1636 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1638 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+3182 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3314 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
+4938 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+4962 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+4964 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+4965 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.8]
+5097 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+5098 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 3459 ms
+5558 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+5633 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+6183 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+6503 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b02db3a
+6506 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+6579 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+8500 [restartedMain] INFO  o.hibernate.orm.connections.access – HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@133e99e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+8611 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+8622 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+9447 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+9876 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77c07c8b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65da9434, org.springframework.security.web.context.SecurityContextHolderFilter@2cb72578, org.springframework.security.web.header.HeaderWriterFilter@2d2c56b2, org.springframework.security.web.csrf.CsrfFilter@47f3919, org.springframework.security.web.authentication.logout.LogoutFilter@2faa05ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f39b639, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@649b8f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24b6c71f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5eadb49a, org.springframework.security.web.access.ExceptionTranslationFilter@6157fb93, org.springframework.security.web.access.intercept.AuthorizationFilter@7b324542]
+10295 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+10316 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+10349 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+10368 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Started TaxicompanyApplication in 9.54 seconds (process running for 10.773)
+17761 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+17762 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+17764 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+24917 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+24922 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+24929 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+1745 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Starting TaxicompanyApplication using Java 17.0.6 with PID 9912 (C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany\target\classes started by Andrei in C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany)
+1771 [restartedMain] INFO  c.j.t.TaxicompanyApplication – No active profile set, falling back to 1 default profile: "default"
+1965 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1966 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+3523 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+3659 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 121 ms. Found 3 JPA repository interfaces.
+5100 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+5118 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+5120 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+5121 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.8]
+5249 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+5250 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 3282 ms
+5731 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+5823 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+6685 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+7197 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43727607
+7201 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+7292 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+9718 [restartedMain] INFO  o.hibernate.orm.connections.access – HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1da3db18] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+9861 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+9876 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+11138 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11740 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5796dcc7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67342cfe, org.springframework.security.web.context.SecurityContextHolderFilter@14c7a015, org.springframework.security.web.header.HeaderWriterFilter@567e6f27, org.springframework.security.web.csrf.CsrfFilter@430c4050, org.springframework.security.web.authentication.logout.LogoutFilter@543bd2a6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b136033, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@583b06dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54cf1ac5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@317f7d3f, org.springframework.security.web.access.ExceptionTranslationFilter@6f0dc6d2, org.springframework.security.web.access.intercept.AuthorizationFilter@7d33bf10]
+12288 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+12309 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+12345 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+12381 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Started TaxicompanyApplication in 11.377 seconds (process running for 12.939)
+16272 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+16273 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+16274 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+36812 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+36821 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+36832 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+2271 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Starting TaxicompanyApplication using Java 17.0.6 with PID 13052 (C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany\target\classes started by Andrei in C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany)
+2279 [restartedMain] INFO  c.j.t.TaxicompanyApplication – No active profile set, falling back to 1 default profile: "default"
+2566 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2566 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+4252 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4399 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 127 ms. Found 3 JPA repository interfaces.
+6235 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+6255 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+6256 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+6257 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.8]
+6376 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+6377 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 3810 ms
+6833 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+6940 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+7619 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+8051 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43727607
+8054 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+8126 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10407 [restartedMain] INFO  o.hibernate.orm.connections.access – HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@615fb580] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+10543 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10553 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+11386 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11876 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67342cfe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@317f7d3f, org.springframework.security.web.context.SecurityContextHolderFilter@3165f2fd, org.springframework.security.web.header.HeaderWriterFilter@219915d8, org.springframework.security.web.csrf.CsrfFilter@489947ae, org.springframework.security.web.authentication.logout.LogoutFilter@6997461c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25de7867, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6340c9a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31a7c435, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f6c60d9, org.springframework.security.web.access.ExceptionTranslationFilter@2d133866, org.springframework.security.web.access.intercept.AuthorizationFilter@2b136033]
+12342 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+12361 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+12392 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+12410 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Started TaxicompanyApplication in 11.257 seconds (process running for 13.002)
+20014 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+20014 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+20016 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+28409 [http-nio-8080-exec-5] INFO  c.j.t.controllers.HomeController – Current user's name is admin phone is 1000 email is example@gmail.com
+28463 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Желтые номера|Детское кресло
+28470 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка|Детское кресло
+28472 [http-nio-8080-exec-5] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+28919 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated attribute {th:include,data-th-include} found in template home, line 15, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+28920 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated unwrapped fragment expression "header :: header" found in template home, line 15, col 9. Please use the complete syntax of fragment expressions instead ("~{header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+29305 [http-nio-8080-exec-5] WARN  o.t.s.p.StandardIncludeTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated attribute {th:include,data-th-include} found in template home, line 82, col 9. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+29306 [http-nio-8080-exec-5] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor – [THYMELEAF][http-nio-8080-exec-5][home] Deprecated unwrapped fragment expression "footer :: footer" found in template home, line 82, col 9. Please use the complete syntax of fragment expressions instead ("~{footer :: footer}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+41731 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+41736 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+41742 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+1758 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Starting TaxicompanyApplication using Java 17.0.6 with PID 12480 (C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany\target\classes started by Andrei in C:\Users\Asus ROG G-L552\IdeaProjects\taxicompany)
+1764 [restartedMain] INFO  c.j.t.TaxicompanyApplication – No active profile set, falling back to 1 default profile: "default"
+1972 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1974 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+4514 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4748 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 212 ms. Found 3 JPA repository interfaces.
+6840 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+6866 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+6876 [restartedMain] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+6877 [restartedMain] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.8]
+7123 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+7123 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 5148 ms
+7735 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+8196 [restartedMain] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.1.7.Final
+8958 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+9580 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cf34ca3
+9583 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+9719 [restartedMain] INFO  SQL dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11839 [restartedMain] INFO  o.hibernate.orm.connections.access – HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ff33119] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+12017 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12056 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+12826 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13306 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2997568e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4eab5b96, org.springframework.security.web.context.SecurityContextHolderFilter@4cedd066, org.springframework.security.web.header.HeaderWriterFilter@731f0aa0, org.springframework.security.web.csrf.CsrfFilter@49a698bc, org.springframework.security.web.authentication.logout.LogoutFilter@47ebc91c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67000b69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5aeb4410, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b7770c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@315843ee, org.springframework.security.web.access.ExceptionTranslationFilter@2e52fabe, org.springframework.security.web.access.intercept.AuthorizationFilter@4b15e22d]
+13713 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer – LiveReload server is running on port 35729
+13738 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+13789 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+13810 [restartedMain] INFO  c.j.t.TaxicompanyApplication – Started TaxicompanyApplication in 12.766 seconds (process running for 14.438)
+79764 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+79764 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+79767 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+79912 [http-nio-8080-exec-1] INFO  c.j.t.m.carmodel.AddonsConverter – s is Фирменная оклейка
+188347 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+188354 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+188363 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
