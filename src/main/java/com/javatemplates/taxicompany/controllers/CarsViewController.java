@@ -81,7 +81,7 @@ public class CarsViewController {
     public String getCar(@PathVariable Long id, Model model, @AuthenticationPrincipal User user){
         filter.setDefault(carService);
         int page = (int)(carService.getRowNumberOfCarByID(id) / 10);
-        Pageable pageable = PageRequest.of(page, 10);
+        Pageable pageable = PageRequest.of(page, 10, Sort.by("id"));
         List<Car> cars = carService.findCarsByRatesAndGearboxesAndEngines(filter.getRates(),
                 filter.getGearboxes(), filter.getEngines(), pageable);
         model.addAttribute("last", (long)(page + 1) * filter.getShowMax() >= filter.getItemsMatch());

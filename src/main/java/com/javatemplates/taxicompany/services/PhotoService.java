@@ -19,4 +19,11 @@ public class PhotoService {
     public void addPhoto(Photo p){
         photoRepository.save(p);
     }
+
+    public boolean deleteById(Long id){
+        if(photoRepository.findById(id).isPresent()){
+            photoRepository.deleteById(id);
+            return true;
+        }return false;
+    }
 }

@@ -54,7 +54,7 @@
       </form>
       <article th:if="!${#lists.isEmpty(cars)}" class="content">
           <div th:each="car : ${cars}" class="car" th:classappend="(${car.id} == ${scrollTo})?'scroll-to':''">
-              <a class="img-link"><img th:src="@{'/image/by-id/' + ${car.photos[0].id}}" class="car-image"></a>
+              <a class="img-link"><img th:src="@{'/image/by-id/'+ ${car.photos[0].id}}" class="car-image"></a>
               <div class="car-info">
                   <div class="car-name" th:text="${car.name}">***</div>
                   <img th:src="@{/image/gearbox.png}" width="26" height="20" alt="Тип КПП: " class="char-image">
@@ -88,11 +88,9 @@
               </div>
           </div>
       </article>
-      <article th:if="${#lists.isEmpty(cars)}">
-          <div class="list-empty-message">
-              Ничего не найдено.
-          </div>
-      </article>
+      <div th:if="${#lists.isEmpty(cars)}" class="list-empty-message">
+          Ничего не найдено.
+      </div>
       <script>
             const scroll_to = document.querySelector(".scroll-to");
             if(scroll_to != null) scroll_to.scrollIntoView();

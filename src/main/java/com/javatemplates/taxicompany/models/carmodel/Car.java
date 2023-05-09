@@ -1,5 +1,6 @@
 package com.javatemplates.taxicompany.models.carmodel;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.javatemplates.taxicompany.models.Photo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +8,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 @Data
@@ -29,4 +32,15 @@ public class Car implements Serializable {
 
     @OneToMany
     private List<Photo> photos;
+
+    @JsonProperty("photos")
+    private void unpackNested(List<Object> ps){
+        photos = new ArrayList<>();
+        for(Object o: ps){
+            Map<String, Integer> photo = (Map<String, Integer>) o;
+            Photo p = new Photo();
+            p.setId(photo.get("id").longValue());
+            photos.add(p);
+        }
+    }
 }

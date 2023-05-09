@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "car.images.max",
+      "type": "java.lang.Integer",
+      "description": "Description for car.images.max."
+  }
+] }

@@ -1,0 +1,89 @@
+html, body{
+    padding:0;
+    margin:0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h2{
+    margin-left:10px;
+}
+
+.form-group{
+    margin:10px 20px;
+}
+
+.preview-image{
+    width: 240px;
+    height: 135px;
+    display:inline-block;
+    margin:10px;
+    background-color: #3a3a3a;
+}
+
+.form-label{
+    margin-right:10px;
+}
+
+.image-not-selected-text{
+    color:#fefefe;
+    width:fit-content;
+    margin:30px auto;
+    font-size: 0.8em;
+}
+
+.rate{
+    margin-left:10px;
+}
+
+textarea{
+    resize: none;
+    border:2px #080808 solid;
+    margin:0 5px 0 0;
+}
+
+input[type="text"]{
+    border:2px #080808 solid;
+}
+
+#addon-add{
+    color: green;
+    margin-top:5px;
+}
+
+.change-list{
+    border:none;
+    background-color: #c9c9c9;
+}
+
+.remove{
+    color: red;
+    margin-left:5px;
+}
+
+.change-list:hover{
+    background-color: #e7e7e7;
+}
+
+.regular-button{
+    border:none;
+    border-radius: 3px;
+    padding:5px 20px;
+    margin: 0 10px;
+    background-color: #080808;
+    color:#fefefe;
+}
+.regular-button:hover, .change-image-label:hover{
+    background-color: #3a3a3a;
+}
+
+.success-message{
+    color:green;
+}
+
+.error-message{
+    color:red;
+}
+
+.success-message, .error-message{
+    display: none;
+}

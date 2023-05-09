@@ -75,7 +75,7 @@
     <label for="phone" class="form-label">Номер телефона</label>
     <input type="text" th:field="*{driverLicense}" class="form-text-input" id="license">
     <label for="license" class="form-label">Серия и номер ВУ</label>
-    <div class="form-text">Отправляя заявку, вы соглашаетесь с условиями <a th:href="@{/offer}">оферты</a></div>
+    <div class="form-text">Отправляя заявку, вы соглашаетесь с условиями <a th:href="@{/api/files/offer}">оферты</a></div>
     <button type="submit" class="send-form black-button">Отправить</button>
   </form>
 </main>

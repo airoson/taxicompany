@@ -29,7 +29,7 @@ public class HomeController {
             model.addAttribute("user", user);
         }
         model.addAttribute("contactForm", new ContactForm());
-        model.addAttribute("cars", carServices.findThreeCars());
+        model.addAttribute("cars", carServices.findRandomCars(3));
         if(user != null && user.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN")))
             model.addAttribute("admin", true);
         else

@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -47,17 +48,21 @@ public class CarService {
         return carRepository.count();
     }
 
-    public Iterable<Car> findThreeCars(){
-        Pageable threeFirst = PageRequest.of(0, 3, Sort.by("id"));
-        return carRepository.findAll(threeFirst);
+    public Iterable<Car> findRandomCars(int count){
+        int pages = (int)carRepository.count() / count;
+        return carRepository.findAll(PageRequest.of((int)(Math.random() * pages), count));
     }
 
     public List<Car> findAllCars(Pageable page) {
         return carRepository.findAll(page).toList();
     }
 
+    public Optional<Car> findById(long id){
+        return carRepository.findById(id);
+    }
+
     public Optional<Car> findById(long id, Pageable page){
-        return carRepository.findCarById(id, page);
+        return carRepository.findById(id, page).stream().findAny();
     }
 
     public List<Car> findCarsByRatesAndGearboxesAndEngines(List<Rate> rates, List<Gearbox> gearboxes,

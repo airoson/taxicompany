@@ -4,13 +4,13 @@ import com.javatemplates.taxicompany.models.carmodel.Car;
 import com.javatemplates.taxicompany.models.carmodel.Engine;
 import com.javatemplates.taxicompany.models.carmodel.Gearbox;
 import com.javatemplates.taxicompany.models.carmodel.Rate;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface CarRepository extends CrudRepository<Car, Long>, PagingAndSortingRepository<Car, Long> {
@@ -42,5 +42,5 @@ public interface CarRepository extends CrudRepository<Car, Long>, PagingAndSorti
     nativeQuery = true)
     List<Car> findCarsByName(String name, Pageable page);
 
-    Optional<Car> findCarById(Long id, Pageable page);
+    Page<Car> findById(Long id, Pageable page);
 }

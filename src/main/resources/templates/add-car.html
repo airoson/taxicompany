@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавть авто</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/add-car.css}">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+    <h2>Добавить авто: </h2>
+    <div class="form-group">
+        <label for="name" class="form-label">Имя: </label>
+        <input type="text" id="name">
+    </div>
+    <div class="form-group" id="image-choose">
+        <label for="add-image" class="form-label">
+            Фото:
+        </label>
+        <input type="file" id="add-image"><br>
+        <div class = "preview-image" id="preview-blank">
+            <div class="image-not-selected-text">Изображение не выбрано</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price" class="form-label">Цена: </label>
+        <input type="text" id="price">
+    </div>
+    <div class="form-group">
+        <label for="name" class="form-label">Честота выплат (в днях): </label><br>
+        <input type="text" id="pay-frequency">
+    </div>
+    <div class="form-group">
+        <label for="name" class="form-label">Минимальный срок аренды (в днях): </label><br>
+        <input type="text" id="rental-period">
+    </div>
+    <div class="form-group">
+        <label for="engine" class="form-label">
+            Двигатель:
+        </label>
+        <select id="engine">
+            <option th:each="engine : ${T(com.javatemplates.taxicompany.models.carmodel.Engine).values()}"
+                    th:text="${engine.type}"
+                    th:value="${engine}">
+                ***
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="gearbox">
+            Тип КПП:
+        </label>
+        <select id="gearbox" class="entry-select">
+            <option th:each="gearbox : ${T(com.javatemplates.taxicompany.models.carmodel.Gearbox).values()}"
+                    th:text="${gearbox.type}"
+                    th:value="${gearbox}">
+                ***
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div>Тарифы: </div>
+        <div class="rate" th:each="rate : ${T(com.javatemplates.taxicompany.models.carmodel.Rate).values()}">
+            <input type="checkbox" th:value="${rate}" class="rate-checkbox" th:id="'checkbox-' + ${rateStat.index}">
+            <label th:for="'checkbox-' + ${rateStat.index}" class="entry-text" th:text="${rate.rate}">***</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            Опции:
+        </div>
+        <ul id="addons">
+        </ul>
+        <div class="addon-button-holder">
+            <textarea id="addon-text" rows="1" cols="20"></textarea><button id="addon-add" class="add change-list">+</button>
+        </div>
+    </div>
+    <div class="form-group error-message">
+        Не удалось добавить автомобиль. Неверные данные.
+    </div>
+    <div class="form-group success-message">
+        Автомобиль успешно добавлен.
+    </div>
+    <div class="form-group">
+        <button id="put" type="button" class="regular-button">
+            Добавить
+        </button>
+        <a th:href="@{/admin/cars?page=0}">
+            <button class="regular-button">Назад</button>
+        </a>
+    </div>
+    <script th:src="@{/js/add-car.js}">
+    </script>
+</body>
+</html>

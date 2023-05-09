@@ -35,6 +35,8 @@ public class DatabaseConfig {
     private String telephone;
     @Value("${user.admin.name}")
     private String name;
+    @Value("${car.images.max}")
+    private int carMaxImages;
 
     public DatabaseConfig() {
     }
@@ -48,6 +50,7 @@ public class DatabaseConfig {
                     List<Photo> photos = new ArrayList<>();
                     File[] carFiles = carDirectory.listFiles();
                     Car car = new Car();
+                    int images = 0;
                     for(File carFile:carFiles){
                         if(carFile.getAbsolutePath().endsWith(".txt")){
                             try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){;
@@ -84,15 +87,18 @@ public class DatabaseConfig {
                                 log.error(e.getMessage());
                             }
                         }else{
-                            try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){
-                                Photo photo = new Photo();
-                                photo.setImage(file.readAllBytes());
-                                photoService.addPhoto(photo);
-                                photos.add(photo);
-                            }catch(IOException e){
-                                log.error(e.getMessage());
+                            if(images < carMaxImages){
+                                try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){
+                                    Photo photo = new Photo();
+                                    photo.setImage(file.readAllBytes());
+                                    photoService.addPhoto(photo);
+                                    photos.add(photo);
+                                }catch(IOException e){
+                                    log.error(e.getMessage());
+                                }
+                                car.setPhotos(photos);
+                                images += 1;
                             }
-                            car.setPhotos(photos);
                         }
                     }
                     log.info("Car " + car.getName() + " "+car.getEngine() + " " + car.getGearbox() + " " + car.getPrice() + " added to database.");

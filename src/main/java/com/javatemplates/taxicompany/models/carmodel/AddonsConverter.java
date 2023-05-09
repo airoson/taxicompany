@@ -13,13 +13,10 @@ public class AddonsConverter implements AttributeConverter<List<String>, String>
     @Override
     public String convertToDatabaseColumn(List<String> strings) {
         if(strings != null) {
-            log.info("Strings {}", strings);
-            String s =  strings.stream().reduce((a, b) -> a + "|" + b).orElseThrow(IllegalArgumentException::new);
-            log.info("After convert {}", s);
+            String s =  strings.stream().reduce((a, b) -> a + "|" + b).orElse(null);
             return s;
         }
         else{
-            log.info("Strings is null");
             return null;
         }
     }
@@ -27,11 +24,9 @@ public class AddonsConverter implements AttributeConverter<List<String>, String>
     @Override
     public List<String> convertToEntityAttribute(String s) {
         if(s != null) {
-            log.info("s is {}", s);
             return Arrays.asList(s.split("\\|"));
         }
         else{
-            log.info("S is null");
             return null;
         }
     }

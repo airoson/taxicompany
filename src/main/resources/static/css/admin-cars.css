@@ -65,7 +65,7 @@ h2{
     background-color: #080808;
     column-gap: 2px;
     padding:1px 2px;
-    grid-template-columns: 40px 300px 120px 100px 100px 130px 200px 130px;
+    grid-template-columns: 80px 300px 120px 100px 100px 130px 200px 130px;
 }
 
 .entry-elem{
@@ -88,8 +88,6 @@ h2{
     display:block;
     margin:10px auto 5px;
 }
-
-
 
 textarea{
     resize: none;
@@ -129,6 +127,7 @@ textarea{
 
 .addons{
     margin:10px 0 5px 10px;
+    padding-left:15px;
 }
 
 .remove{
@@ -175,4 +174,22 @@ textarea{
 textarea ~ span{
     position:relative;
     top:-5px;
+}
+
+.buttons-holder{
+    display: flex;
+    justify-content: center;
+}
+
+.nothing-found-message{
+    margin:10px 30px;
+}
+
+.upper-button{
+    display:inline-block;
+    margin:10px 30px;
+}
+
+.page-button{
+    margin:20px 30px;
 }
