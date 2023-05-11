@@ -60,7 +60,7 @@ document.getElementById("put").addEventListener("click", async (event) => {
         let data = new FormData()
         data.append('file', file)
         await fetch("http://localhost:8080/image", {
-            method: "POST",
+            method: "PUT",
             headers: {
                 [header]: token,
             },

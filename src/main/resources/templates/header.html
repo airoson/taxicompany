@@ -2,7 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <body>
     <header th:fragment="header">
-        <div id="logo"><a th:href="@{/home}">taxi rent</a><div class="header-image" id="row1"></div><div class="header-image" id="row2"></div></div>
+        <div id="logo"><a th:href="@{/home}">taxi rent</a><div class="header-image" id="row1">
+        </div><div class="header-image" id="row2"></div></div>
         <div class="header-buttons-holder">
             <span th:if="${user}" class="username-header" th:text="'Здравствуйте, ' + ${user.name}"></span>
             <a th:if="${admin}" th:href="@{/admin}">

@@ -85,7 +85,7 @@ public class CarService {
     }
 
     public List<String> getAvailableCarsCompanies(){
-        List<String> names = carRepository.getAllNames();
+        List<String> names = carRepository.findAllNames();
         return names.stream().map(name -> name.split(" ")[0]).distinct().toList();
     }
 
@@ -101,6 +101,6 @@ public class CarService {
     }
 
     public List<Car> findCarsByName(String name, Pageable page){
-        return carRepository.findCarsByName("%" + name + "%", page);
+        return carRepository.findByName("%" + name + "%", page);
     }
 }

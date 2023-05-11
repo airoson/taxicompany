@@ -18,14 +18,12 @@ public class HomeController {
     private CarService carServices;
 
     public HomeController(CarService carServices) {
-
         this.carServices = carServices;
     }
 
     @GetMapping("/home")
     public String getHomeView(Model model, @AuthenticationPrincipal User user){
         if(user != null) {
-            log.info(String.format("Current user's name is %s phone is %s email is %s", user.getName(), user.getPhoneNumber(), user.getEmail()));
             model.addAttribute("user", user);
         }
         model.addAttribute("contactForm", new ContactForm());

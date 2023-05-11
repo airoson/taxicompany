@@ -12,9 +12,25 @@
   Список зарегистрированных пользователей:
 </h2>
 <div class="table-holder">
+  <div class="user-table">
+    <div class="table-elem">
+      Имя
+    </div>
+    <div class="table-elem">
+      Номер телефона
+    </div>
+    <div class="table-elem">
+      Электронная почта
+    </div>
+    <div class="table-elem">
+      Создан:
+    </div>
+    <div class="table-elem">
+
+    </div>
+  </div>
   <div th:each="user : ${users}" class="user-table">
     <div class="table-elem" th:text="${user.name}">
-
     </div>
     <div class="table-elem" th:text="${user.phoneNumber}">
     </div>
@@ -29,13 +45,13 @@
       </button>
     </div>
   </div>
-  <div>
-    <a th:href="@{/admin}">
-      <button class="return-button">
-        Назад
-      </button>
-    </a>
-  </div>
+</div>
+<div>
+  <a th:href="@{/admin}">
+    <button class="return-button">
+      Назад
+    </button>
+  </a>
 </div>
 <script>
   let delete_user = document.querySelectorAll(".delete-button")

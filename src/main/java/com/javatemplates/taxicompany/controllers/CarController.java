@@ -17,11 +17,11 @@ import java.util.List;
 @Slf4j
 @RequestMapping(path = "/api/cars", produces = "application/json")
 @CrossOrigin(origins = "http://localhost:8080")
-public class CarsController {
+public class CarController {
     private CarService carService;
     private PhotoService photoService;
 
-    public CarsController(CarService carService, PhotoService photoService) {
+    public CarController(CarService carService, PhotoService photoService) {
         this.carService = carService;
         this.photoService = photoService;
     }

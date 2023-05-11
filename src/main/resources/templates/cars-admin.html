@@ -44,7 +44,7 @@
             </div>
             <div class="entry-elem">
                 <textarea th:id="${car.id} + '-name'" class="name-text" rows="1" cols="30" th:text="${car.name}">***</textarea>
-                <img th:src="@{'/image/by-id/' + ${car.photos[0].id}}" th:id="${car.id} + '-image'" class="entry-image" alt="car image">
+                <img th:src="@{'/image/' + ${car.photos[0].id}}" th:id="${car.id} + '-image'" class="entry-image" alt="car image">
                 <label class="change-image-label" th:for="'change-image-' + ${car.id}">Изменить</label>
                 <input type="file" multiple th:id="'change-image-' + ${car.id}" th:attr="car-id=${car.id}" class="change-image">
             </div>

@@ -32,7 +32,7 @@ public interface CarRepository extends CrudRepository<Car, Long>, PagingAndSorti
 
     @Query(value="SELECT name FROM Car GROUP BY name",
     nativeQuery = true)
-    List<String> getAllNames();
+    List<String> findAllNames();
 
     @Query(value="WITH mytable AS (SELECT ROW_NUMBER() OVER(ORDER BY id) AS row_number, id FROM Car) SELECT row_number FROM mytable WHERE id = ?1",
     nativeQuery = true)
@@ -40,7 +40,7 @@ public interface CarRepository extends CrudRepository<Car, Long>, PagingAndSorti
 
     @Query(value="SELECT * FROM Car c WHERE c.name LIKE ?1",
     nativeQuery = true)
-    List<Car> findCarsByName(String name, Pageable page);
+    List<Car> findByName(String name, Pageable page);
 
     Page<Car> findById(Long id, Pageable page);
 }

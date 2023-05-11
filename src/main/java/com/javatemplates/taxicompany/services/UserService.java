@@ -4,6 +4,7 @@ import com.javatemplates.taxicompany.models.User;
 import com.javatemplates.taxicompany.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -14,8 +15,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User findByName(String name){
-        return userRepository.findByName(name);
+    public Iterable<User> findByName(String name){
+        Iterable<User> users = userRepository.findByName(name);
+        if(users.iterator().hasNext())
+            return users;
+        else return null;
     }
 
     public User findByPhoneNumber(String phoneNumber){

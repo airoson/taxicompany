@@ -21,4 +21,13 @@ public class UserController {
     public void deleteUser(@PathVariable long id){
         userService.deleteUserById(id);
     }
+
+    @PutMapping()
+    public ResponseEntity<?> putUser(@RequestBody User user){
+        if(userService.findByPhoneNumber(user.getPhoneNumber()) != null &&
+        user.getName() != null && user.getAuthorities() != null && user.getEmail() != null){
+            userService.addUser(user);
+            return new ResponseEntity<>(null, HttpStatus.OK);
+        }else return ResponseEntity.unprocessableEntity().build();
+    }
 }

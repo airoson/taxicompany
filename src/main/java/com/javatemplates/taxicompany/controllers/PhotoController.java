@@ -22,7 +22,7 @@ public class PhotoController {
         this.photoService = photoService;
     }
 
-    @GetMapping("/image/by-id/{id}")
+    @GetMapping("/image/{id}")
     public void getImage(@PathVariable Long id, HttpServletResponse response){
         response.setContentType("image/png");
         Photo photo = photoService.findPhotoById(id);
@@ -35,7 +35,7 @@ public class PhotoController {
         }
     }
 
-    @PostMapping("/image")
+    @PutMapping("/image")
     public ResponseEntity<Photo> putPhoto(@RequestParam MultipartFile file){
         Photo photo = new Photo();
         try{

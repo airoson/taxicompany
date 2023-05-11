@@ -31,6 +31,6 @@ public class RegistrationController {
             model.addAttribute("alreadyExists", true);
             return "regin";
         }else
-            return "redirect:/home";
+            return "redirect:/login";
     }
 }

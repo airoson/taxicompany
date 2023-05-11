@@ -17,11 +17,13 @@ h2{
     background-color: #080808;
 }
 .table-holder{
-    display:flex;
+    display:inline-flex;
     flex-direction:column;
     justify-content:start;
     align-items:start;
     margin-left:30px;
+    background-color:#080808;
+    padding:2px 0;
 }
 
 .table-elem{
@@ -46,6 +48,7 @@ h2{
 
 .return-button{
     border:none;
+    display: block;
     background-color: #F7E105;
     color: #080808;
     padding:5px 10px;

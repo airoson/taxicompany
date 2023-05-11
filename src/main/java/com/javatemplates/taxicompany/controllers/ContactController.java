@@ -41,7 +41,7 @@ public class ContactController {
 
     @PostMapping("/car/{id}")
     public String contactAboutCar(@PathVariable Long id, Model model, @AuthenticationPrincipal User user){
-        model.addAttribute("username", user.getUsername());
+        model.addAttribute("username", user.getName());
         Car car = carService.findById(id).orElse(null);
         model.addAttribute("car", car);
         mailService.sendSimpleMessage(sendMessagesTo,

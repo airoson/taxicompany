@@ -24,17 +24,17 @@
     Наши преимущества:
   </h2>
   <article class="advantages">
-    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <img class="check-sign" th:src="@{img/check-sign.png}" width="30" height="30" alt="green check sign">
     <div class="advantage">
       <span class="advantage-header">Быстрое оформление</span><br>
       Возьмите авто в аренду быстро, оформив заявку онлайн
     </div>
-    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <img class="check-sign" th:src="@{img/check-sign.png}" width="30" height="30" alt="green check sign">
     <div class="advantage">
       <span class="advantage-header">Много предложений</span><br>
       Выберете подходящий для себя вариант из множества автомобилей, представленных на сайте
     </div>
-    <img class="check-sign" th:src="@{image/check-sign.png}" width="30" height="30" alt="green check sign">
+    <img class="check-sign" th:src="@{img/check-sign.png}" width="30" height="30" alt="green check sign">
     <div class="advantage">
       <span class="advantage-header">Снижение расходов</span><br>
       Вам больше не придется тратиться на ремонт и обслуживание авто &#8211; таксопарк сделает это за вас
@@ -56,7 +56,7 @@
     <a th:each="car : ${cars}" th:href="@{'/cars/' + ${car.id}}">
       <div  class="car">
         <span class="car-header" th:text="${car.name}">***</span>
-        <img class="car-image" th:src="'/image/by-id/' + ${car.photos[0].id}" >
+        <img class="car-image" th:src="'/image/' + ${car.photos[0].id}" >
         <span class="car-price" th:text="'От ' + ${car.price} + '₽ в сутки'">***</span>
       </div>
     </a>

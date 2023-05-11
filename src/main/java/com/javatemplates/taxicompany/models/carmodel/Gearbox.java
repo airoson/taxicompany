@@ -14,9 +14,9 @@ public enum Gearbox {
     }
 
     public static Gearbox fromString(String gearbox){
-        if(gearbox.trim().equalsIgnoreCase("автомат"))
+        if(gearbox.trim().equalsIgnoreCase("Автомат"))
             return Gearbox.AUTO;
-        if(gearbox.trim().equalsIgnoreCase("механика"))
+        if(gearbox.trim().equalsIgnoreCase("Механика"))
             return Gearbox.MANUAL;
         return null;
     }
