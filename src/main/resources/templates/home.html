@@ -56,7 +56,7 @@
     <a th:each="car : ${cars}" th:href="@{'/cars/' + ${car.id}}">
       <div  class="car">
         <span class="car-header" th:text="${car.name}">***</span>
-        <img class="car-image" th:src="'/image/' + ${car.photos[0].id}" >
+        <img class="car-image" th:src="@{'/api/image/' + ${car.photos[0].id}}" >
         <span class="car-price" th:text="'От ' + ${car.price} + '₽ в сутки'">***</span>
       </div>
     </a>

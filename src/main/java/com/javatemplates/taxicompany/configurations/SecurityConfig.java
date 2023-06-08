@@ -19,8 +19,9 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        return http.authorizeHttpRequests()
-                .requestMatchers("/profile", "/contact/car/*").hasRole("USER")
+        return http
+                .authorizeHttpRequests()
+                .requestMatchers("/account", "/contact/car/*").hasRole("USER")
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/*", "/**")
                 .permitAll()

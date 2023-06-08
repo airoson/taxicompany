@@ -16,13 +16,14 @@ import java.io.IOException;
 
 @RestController
 @Slf4j
+@RequestMapping("/api/image")
 public class PhotoController {
     private PhotoService photoService;
     public PhotoController(PhotoService photoService) {
         this.photoService = photoService;
     }
 
-    @GetMapping("/image/{id}")
+    @GetMapping("/{id}")
     public void getImage(@PathVariable Long id, HttpServletResponse response){
         response.setContentType("image/png");
         Photo photo = photoService.findPhotoById(id);
@@ -35,7 +36,7 @@ public class PhotoController {
         }
     }
 
-    @PutMapping("/image")
+    @PutMapping()
     public ResponseEntity<Photo> putPhoto(@RequestParam MultipartFile file){
         Photo photo = new Photo();
         try{

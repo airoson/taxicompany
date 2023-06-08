@@ -8,13 +8,13 @@
 <body>
 <main>
     <article class="content">
-        <div th:each="car : ${cars}" class="car">
-            <a class="img-link"><img src="static/image/image1.png" class="car-image"></a>
+        <div class="car">
+            <a class="img-link"><img src="/static/img/image1.png" class="car-image"></a>
             <div class="car-info">
                 <div class="car-name">Name name</div>
-                <img src="static/image/gearbox.png" width="26" height="20" alt="Тип КПП: " class="char-image">
+                <img src="/static/img/gearbox.png" width="26" height="20" alt="Тип КПП: " class="char-image">
                 <span class="characteristics">Автомат</span>
-                <img src="static/image/fuel.png" width="18" height="20" alt="Двигатель: " class="char-image">
+                <img src="/static/img/fuel.png" width="18" height="20" alt="Двигатель: " class="char-image">
                 <span class="characteristics">Бензин</span><br>
                 <div class="addon-info">
                     <div class="rates-holder">
@@ -34,11 +34,14 @@
                 </div>
                 <div class="price-info">Выплаты раз в 7 дней</div>
                 <div class="price-info">Мин. срок аренды - 1 день</div>
-                <a>
-                    <button type="button" class="contact-button">
+                <div class="bottom-buttons-holder">
+                    <button type="button" class="bottom-button">
                         Связаться
                     </button>
-                </a>
+                    <button type="button" class="bottom-button">
+                        В избранное
+                    </button>
+                </div>
             </div>
             <div class="car-price">
                 <div class="price">1000 ₽/день</div>

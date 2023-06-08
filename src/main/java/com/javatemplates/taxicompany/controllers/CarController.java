@@ -5,11 +5,13 @@ import com.javatemplates.taxicompany.models.Photo;
 import com.javatemplates.taxicompany.models.carmodel.Car;
 import com.javatemplates.taxicompany.services.CarService;
 import com.javatemplates.taxicompany.services.PhotoService;
+import com.javatemplates.taxicompany.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +22,12 @@ import java.util.List;
 public class CarController {
     private CarService carService;
     private PhotoService photoService;
+    private UserService userService;
 
-    public CarController(CarService carService, PhotoService photoService) {
+    public CarController(CarService carService, PhotoService photoService, UserService userService) {
         this.carService = carService;
         this.photoService = photoService;
+        this.userService = userService;
     }
 
     @DeleteMapping("/{id}")
@@ -43,16 +47,27 @@ public class CarController {
 
     @PutMapping
     public ResponseEntity<Car> putCar(@RequestBody Car car){
-        if(car.getRates() == null || car.getRates().isEmpty())
+        if(car.getRates() == null || car.getRates().isEmpty()){
+            log.warn("Trying to add car without rates");
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
-        if(car.getName() == null || car.getName().isEmpty())
+        }
+
+        if(car.getName() == null || car.getName().isEmpty()){
+            log.warn("Trying to add car with empty name");
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
-        if(car.getEngine() == null)
+        }
+        if(car.getEngine() == null) {
+            log.warn("Trying to add car without engine type.");
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
-        if(car.getGearbox() == null)
+        }
+        if(car.getGearbox() == null) {
+            log.warn("Trying to add car without gearbox type.");
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
-        if(car.getPhotos() == null || car.getPhotos().isEmpty())
+        }
+        if(car.getPhotos() == null || car.getPhotos().isEmpty()) {
+            log.warn("Trying to add car without photo.");
             return new ResponseEntity<>(null, HttpStatus.UNPROCESSABLE_ENTITY);
+        }
         carService.addCar(car);
         return new ResponseEntity<>(car, HttpStatus.OK);
     }
@@ -106,5 +121,19 @@ public class CarController {
             carService.addCar(oldCar);
             return new ResponseEntity<>(oldCar, HttpStatus.OK);
         }else return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @PostMapping("/favorites/{carId}")
+    public ResponseEntity<?> addToFavorites(@PathVariable Long carId, Principal principal){
+        if(userService.addFavoriteCar(userService.findByPhoneNumber(principal.getName()), carId))
+            return ResponseEntity.ok().build();
+        else return ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/favorites/{carId}")
+    public ResponseEntity<?> deleteFromFavorites(@PathVariable Long carId, Principal principal){
+        if(userService.deleteFavoriteCar(userService.findByPhoneNumber(principal.getName()), carId))
+            return ResponseEntity.ok().build();
+        else return ResponseEntity.notFound().build();
     }
 }

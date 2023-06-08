@@ -17,10 +17,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 @Configuration
@@ -47,14 +48,18 @@ public class DatabaseConfig {
             if(carServices.countAll() < 3){
                 File[] cars = (new File(System.getProperty("user.dir") + "/prepared_data")).listFiles();
                 for(File carDirectory:cars){
+                    log.info("Found new car, file: {}", carDirectory.getAbsolutePath());
+                    log.info("All directories: {}", Arrays.toString(carDirectory.listFiles()));
                     List<Photo> photos = new ArrayList<>();
                     File[] carFiles = carDirectory.listFiles();
                     Car car = new Car();
                     int images = 0;
                     for(File carFile:carFiles){
                         if(carFile.getAbsolutePath().endsWith(".txt")){
-                            try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){;
-                                String[] lines = new String(file.readAllBytes()).split("\n");
+                            log.info("Working with file {}", carFile.getName());
+                            try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){
+                                String[] lines = new String(file.readAllBytes(), StandardCharsets.UTF_8).split("\n");
+                                log.info("Input stream opened, file context: {}", Arrays.toString(lines));
                                 for(String line:lines){
                                     String[] params = line.split("=");
                                     if(params[0].equals("цена")) {
@@ -89,6 +94,7 @@ public class DatabaseConfig {
                         }else{
                             if(images < carMaxImages){
                                 try(FileInputStream file = new FileInputStream(carFile.getAbsolutePath())){
+                                    log.info("Input stream opened, file is image");
                                     Photo photo = new Photo();
                                     photo.setImage(file.readAllBytes());
                                     photoService.addPhoto(photo);

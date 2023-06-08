@@ -17,14 +17,17 @@
     <div class="form-header-line" id="row2"></div>
     <div class="form-header-text">Регистрация</div>
     <div class="form-error" th:if="${alreadyExists}">Пользователь с таким номером телефона уже существует</div>
-    <form th:action="@{/register}" method="post" class="form-holder">
-        <input type="text" class="text-field" id="name" name="name" required>
+    <div class="form-error" th:if="${wrongPassword}">Длина пароля - от 6 до 20 символов. Пароль должен содержать специальные символы, заглавные и строчные буквы, а также цифры</div>
+    <div class="form-error" th:if="${wrongEmail}">Введите действительный адрес электронной почты</div>
+    <div class="form-error" th:if="${wrongPhoneNumber}">Укажите существующий номер телефона</div>
+    <form th:action="@{/register}" th:object="${reginForm}" method="post" class="form-holder">
+        <input type="text" class="text-field" id="name" th:field="*{name}" required>
         <label for="name" class="text-label">Имя</label>
-        <input type="text" class="text-field" name="phoneNumber" id="phoneNumber" required>
+        <input type="text" class="text-field" th:field="*{phoneNumber}" id="phoneNumber" required>
         <label for="phoneNumber" class="text-label">Телефон</label>
-        <input type="text" class="text-field" name="email" id="email">
+        <input type="text" class="text-field" th:field="*{email}" id="email">
         <label for="email" class="text-label">Эл. почта</label>
-        <input type="text" class="text-field" name="password" id="password" required>
+        <input type="text" class="text-field" th:field="*{password}" id="password" required>
         <label for="password" class="text-label">Пароль</label>
         <button type="submit" class="form-submit">Зарегистрироваться</button>
     </form>

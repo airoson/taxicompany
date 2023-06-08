@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/cars.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body>
   <header th:include="header :: header"></header>
@@ -41,8 +43,8 @@
           <select name="sort" th:field="*{sort}">
               <option value="default">По умолчанию</option>
               <option value="price">Цене</option>
-              <option value="rental-period-desc">Срок аренды (по возр.)</option>
-              <option value="rental-period-asc">Срок аренды (по убыв.)</option>
+              <option value="rental-period-asc">Срок аренды (по возр.)</option>
+              <option value="rental-period-desc">Срок аренды (по убыв.)</option>
           </select>
           <span class="filter-text">Показывать на странице: </span>
           <select name="show" th:field="*{showMax}">
@@ -54,7 +56,7 @@
       </form>
       <article th:if="!${#lists.isEmpty(cars)}" class="content">
           <div th:each="car : ${cars}" class="car" th:classappend="(${car.id} == ${scrollTo})?'scroll-to':''">
-              <a class="img-link"><img th:src="@{'/image/'+ ${car.photos[0].id}}" class="car-image"></a>
+              <a class="img-link"><img th:src="@{'/api/image/'+ ${car.photos[0].id}}" class="car-image"></a>
               <div class="car-info">
                   <div class="car-name" th:text="${car.name}">***</div>
                   <img th:src="@{/img/gearbox.png}" width="26" height="20" alt="Тип КПП: " class="char-image">
@@ -77,11 +79,17 @@
                   </div>
                   <div class="price-info" th:if="${car.payFrequency} != null" th:text="'Выплаты раз в ' + ${car.payFrequency} + ' ' + ${T(com.javatemplates.taxicompany.models.carmodel.StringDay).getDesc(car.payFrequency)}">***</div>
                   <div class="price-info" th:if="${car.rentalPeriod} != null" th:text="'Мин. срок аренды - ' + ${car.rentalPeriod} + ' ' + ${T(com.javatemplates.taxicompany.models.carmodel.StringDay).getDesc(car.rentalPeriod)}">***</div>
-                  <form th:action="@{'/contact/car/' + ${car.id}}" method="post">
-                      <button type="submit" class="contact-button">
-                          Связаться
+                  <div class="bottom-buttons-holder">
+                      <form th:action="@{'/contact/car/' + ${car.id}}" method="post">
+                          <button type="submit" class="bottom-button">
+                              Связаться
+                          </button>
+                      </form>
+                      <button th:if="${user}" th:attr="car-id=${car.id}" th:text="${user.isInFavorite(car.id)}?'Удалить':'В избранное'" type="button" class="bottom-button" th:classappend="${user.isInFavorite(car.id)}?'remove-favorite-button':'add-favorite-button'">
+                          ***
                       </button>
-                  </form>
+                  </div>
+
               </div>
               <div class="car-price">
                   <div class="price" th:text="${car.price} + '₽/день'"></div>
@@ -91,9 +99,7 @@
       <div th:if="${#lists.isEmpty(cars)}" class="list-empty-message">
           Ничего не найдено.
       </div>
-      <script>
-            const scroll_to = document.querySelector(".scroll-to");
-            if(scroll_to != null) scroll_to.scrollIntoView();
+      <script th:src="@{/js/cars.js}">
       </script>
   </main>
   <div th:if="!${#lists.isEmpty(cars)}" class="buttons-holder">

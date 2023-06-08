@@ -3,6 +3,7 @@ package com.javatemplates.taxicompany.security;
 import com.javatemplates.taxicompany.models.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -11,6 +12,7 @@ import java.util.Arrays;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Slf4j
 public class RegistrationForm {
     private String name;

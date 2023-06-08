@@ -149,19 +149,18 @@ fieldset{
     margin: 50px auto;
 }
 
-.contact-button{
+.bottom-button{
     border:none;
     background-color: #F7E105;
     color: #080808;
-    margin: 50px auto 0;
+    margin: 50px 20px 0;
     padding:10px 20px;
     font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
     transition: 250ms;
-    display:block;
 }
 
-.contact-button:hover{
+.bottom-button:hover{
     -webkit-box-shadow: 0 0 5px 3px rgba(247, 225, 5, 0.5);
     -moz-box-shadow: 0 0 5px 3px rgba(247, 225, 5, 0.5);
     box-shadow: 0 0 5px 3px rgba(247, 225, 5, 0.5);
@@ -170,4 +169,9 @@ fieldset{
 .price-info{
     color:#fefefe;
     margin:5px 20px;
+}
+
+.bottom-buttons-holder{
+    display:flex;
+    justify-content:center;
 }

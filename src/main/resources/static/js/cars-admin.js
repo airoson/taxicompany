@@ -67,7 +67,7 @@ for(let update of document.querySelectorAll(".update-car")){
          for (let file of files[car_id]) {
             let data = new FormData()
             data.append('file', file)
-            await fetch("http://localhost:8080/image", {
+            await fetch("http://localhost:8080/api/image", {
                method: "PUT",
                headers: {
                   [header]: token,

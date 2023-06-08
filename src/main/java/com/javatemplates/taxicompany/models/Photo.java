@@ -1,5 +1,6 @@
 package com.javatemplates.taxicompany.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,6 +24,7 @@ public class Photo{
     private String description;
     @Lob
     @Column(name="stored_image")
+    @JsonIgnore
     private byte[] image;
 
     public Photo(byte[] image) {

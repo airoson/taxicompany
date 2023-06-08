@@ -59,7 +59,7 @@ document.getElementById("put").addEventListener("click", async (event) => {
     if (file != null) {
         let data = new FormData()
         data.append('file', file)
-        await fetch("http://localhost:8080/image", {
+        await fetch("http://localhost:8080/api/image", {
             method: "PUT",
             headers: {
                 [header]: token,
@@ -67,7 +67,7 @@ document.getElementById("put").addEventListener("click", async (event) => {
             body: data
         }).then(response => Promise.all([response.status, response.json()]))
             .then(function ([status, myJson]) {
-                if (status == 200) {
+                if (status === 200) {
                     photos.push({"id": myJson["id"]});
                 }
             });

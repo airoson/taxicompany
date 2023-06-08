@@ -5,6 +5,7 @@ import com.javatemplates.taxicompany.forms.CarFilterForm;
 import com.javatemplates.taxicompany.models.User;
 import com.javatemplates.taxicompany.models.carmodel.Car;
 import com.javatemplates.taxicompany.services.CarService;
+import com.javatemplates.taxicompany.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -21,11 +23,13 @@ import java.util.List;
 @Slf4j
 public class CarsViewController {
     private CarService carService;
+    private UserService userService;
     private CarFilter filter;
 
-    public CarsViewController(CarService carService, CarFilter carFilter) {
+    public CarsViewController(CarService carService, UserService userService, CarFilter filter) {
         this.carService = carService;
-        filter = carFilter;
+        this.userService = userService;
+        this.filter = filter;
     }
 
     @ModelAttribute
@@ -49,7 +53,10 @@ public class CarsViewController {
     }
 
     @GetMapping("/all")
-    public String getCarsFiltered(@RequestParam int page, Model model, @AuthenticationPrincipal User user){
+    public String getCarsFiltered(@RequestParam int page, Model model, Principal principal){
+        User user = null;
+        if(principal != null)
+            user = userService.findByPhoneNumber(principal.getName());
         Sort sort;
         if(filter.getSort().equals("default"))
             sort = Sort.by("id");
@@ -78,7 +85,10 @@ public class CarsViewController {
     }
 
     @GetMapping("/{id}")
-    public String getCar(@PathVariable Long id, Model model, @AuthenticationPrincipal User user){
+    public String getCar(@PathVariable Long id, Model model, Principal principal){
+        User user = null;
+        if(principal != null)
+            user = userService.findByPhoneNumber(principal.getName());
         filter.setDefault(carService);
         int page = (int)(carService.getRowNumberOfCarByID(id) / 10);
         Pageable pageable = PageRequest.of(page, 10, Sort.by("id"));
