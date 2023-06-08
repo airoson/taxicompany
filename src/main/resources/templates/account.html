@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/account.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/header.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/footer.css}">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>Аккаунт</title>
+</head>
+<body>
+<header th:include="header :: header"></header>
+  <main>
+      <article class="favorite-cars">
+          <div class="favorite-header">Избранное</div>
+          <div th:if="${#lists.size(favorites)} == 0" class="nothing-found">Ничего не добавлено.</div>
+          <div th:each="car : ${favorites}" class="car">
+              <a class="img-link"><img th:src="@{'/api/image/'+ ${car.photos[0].id}}" class="car-image"></a>
+              <div class="car-info">
+                  <div class="car-name" th:text="${car.name}">***</div>
+                  <img th:src="@{/img/gearbox.png}" width="26" height="20" alt="Тип КПП: " class="char-image">
+                  <span class="characteristics" th:text="${car.gearbox.type}">***</span>
+                  <img th:src="@{/img/fuel.png}" width="18" height="20" alt="Двигатель: " class="char-image">
+                  <span class="characteristics" th:text="${car.engine.type}">Бензин</span><br>
+                  <div class="addon-info">
+                      <div class="rates-holder">
+                          <div class="addon">Тарифы:</div>
+                          <ul class="addon-list">
+                              <li th:each="rate : ${car.rates}" th:text="${rate.rate}">***</li>
+                          </ul>
+                      </div>
+                      <div class="addons-holder">
+                          <div class="addon">Дополнительно</div>
+                          <ul class="addon-list">
+                              <li th:each="addon : ${car.addons}" th:text="${addon}">***</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="price-info" th:if="${car.payFrequency} != null" th:text="'Выплаты раз в ' + ${car.payFrequency} + ' ' + ${T(com.javatemplates.taxicompany.models.carmodel.StringDay).getDesc(car.payFrequency)}">***</div>
+                  <div class="price-info" th:if="${car.rentalPeriod} != null" th:text="'Мин. срок аренды - ' + ${car.rentalPeriod} + ' ' + ${T(com.javatemplates.taxicompany.models.carmodel.StringDay).getDesc(car.rentalPeriod)}">***</div>
+                  <div class="bottom-buttons-holder">
+                      <form th:action="@{'/contact/car/' + ${car.id}}" method="post">
+                          <button type="submit" class="bottom-button">
+                              Связаться
+                          </button>
+                      </form>
+                      <button th:if="${user}" th:attr="car-id=${car.id}" th:text="${user.isInFavorite(car.id)}?'Удалить':'В избранное'" type="button" class="bottom-button" th:classappend="${user.isInFavorite(car.id)}?'remove-favorite-button':'add-favorite-button'">
+                          ***
+                      </button>
+                  </div>
+              </div>
+              <div class="car-price">
+                  <div class="price" th:text="${car.price} + '₽/день'"></div>
+              </div>
+          </div>
+      </article>
+    <article class="user-info">
+        <div class="user-info-field"> Имя: <span th:text="${user.name}">***</span></div>
+        <div class="user-info-field"> Телефон: <span th:text="${user.phoneNumber}">***</span></div>
+        <div class="user-info-field"> Эл. почта: <span th:text="${user.email} == ''?'не указан':${user.email}">***</span></div>
+        <div class="user-buttons-holder">
+            <form id="logout-form" th:action="@{/logout}" th:method="post">
+                <button class="user-button">Выйти</button>
+            </form>
+            <form id="delete-account-form" th:action="@{/logout}" th:method="post">
+                <button id="user-delete-button" class="user-button" th:attr="user-id=${user.id}">Удалить</button>
+            </form>
+
+        </div>
+    </article>
+  </main>
+<script th:src="@{/js/account.js}">
+</script>
+<footer th:include="footer :: footer"></footer>
+</body>
+</html>
