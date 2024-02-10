@@ -62,9 +62,16 @@ public class DatabaseConfig {
                                 log.info("Input stream opened, file context: {}", Arrays.toString(lines));
                                 for(String line:lines){
                                     String[] params = line.split("=");
+                                    params[1] = params[1].replaceAll("[ \r]", "");
                                     if(params[0].equals("цена")) {
-                                        System.out.println(carDirectory.getName() + " price " + params[1].replace(" ", ""));
-                                        car.setPrice(Integer.parseInt(params[1].replace(" ", "")));
+                                        log.info(carDirectory.getName() + " price " + params[1]);
+                                        try {
+                                            System.out.println("params[1] = \"" + params[1] + "\"");
+                                            car.setPrice(Integer.parseInt(params[1]));
+                                        }catch(Exception e){
+                                            log.error(e.getMessage());
+                                            throw e;
+                                        }
                                     }
                                     else if(params[0].equals("дополнительно")){
                                         if(params.length > 1 && !params[1].isEmpty())
